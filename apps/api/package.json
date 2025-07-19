@@ -1,0 +1,38 @@
+{
+  "name": "@taskmaster/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "dev": "convex dev",
+    "seed": "convex dev --run model/scripts/init --until-success",
+    "nuke": "convex dev --run model/scripts/reset --until-success",
+    "deploy-convex": "convex deploy",
+    "generate": "convex codegen",
+    "build": "tsc",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --max-warnings 0 --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@clerk/backend": "^1.31.4",
+    "@react-email/components": "0.0.41",
+    "@taskmaster/eslint-config": "workspace:*",
+    "@taskmaster/tsconfig": "workspace:*",
+    "convex": "catalog:",
+    "convex-helpers": "^0.1.86",
+    "elevenlabs": "^1.57.0",
+    "nanoid": "^5.1.5",
+    "openai": "^5.8.2",
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19",
+    "resend": "^4.5.1",
+    "svix": "^1.65.0"
+  },
+  "devDependencies": {
+    "@taskmaster/tsconfig": "workspace:*",
+    "@types/node": "^22.14.1",
+    "typescript": "catalog:"
+  }
+}

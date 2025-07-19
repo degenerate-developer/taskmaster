@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "src/styles/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "iconLibrary": "lucide",
+  "aliases": {
+    "components": "@taskmaster/ui/components",
+    "utils": "@taskmaster/ui/lib/utils",
+    "hooks": "@taskmaster/ui/hooks",
+    "lib": "@taskmaster/ui/lib",
+    "ui": "@taskmaster/ui/components"
+  }
+}

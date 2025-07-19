@@ -1,0 +1,37 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [".env", "**/.env.*local"],
+  "globalEnv": [
+    "NODE_ENV",
+    "NEXT_PUBLIC_CONVEX_URL",
+    "CONVEX_DEPLOY_KEY",
+    "UPSTASH_REDIS_REST_URL",
+    "UPSTASH_REDIS_REST_TOKEN",
+    "CLERK_SECRET_KEY"
+  ],
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build", "generate"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "env": ["NEXT_PUBLIC_CONVEX_URL", "CONVEX_DEPLOY_KEY"]
+    },
+    "generate": {
+      "outputs": ["apps/api/convex/_generated/**"],
+      "cache": true,
+      "dependsOn": []
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"],
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

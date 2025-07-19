@@ -1,0 +1,53 @@
+{
+  "name": "@taskmaster/web",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "add-ui": "npx shadcn@latest add",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@11labs/react": "^0.1.3",
+    "@clerk/nextjs": "^6.19.1",
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "@tanstack/react-table": "^8.21.3",
+    "@taskmaster/api": "workspace:*",
+    "@taskmaster/ui": "workspace:*",
+    "@upstash/redis": "^1.34.9",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "babel-plugin-react-compiler": "19.1.0-rc.1",
+    "convex": "catalog:",
+    "fast-deep-equal": "^3.1.3",
+    "framer-motion": "^12.9.2",
+    "lru-cache": "^11.1.0",
+    "lucide-react": "catalog:",
+    "luxon": "^3.6.1",
+    "nanoid": "^5.1.5",
+    "next": "^15.3.1",
+    "next-themes": "^0.4.6",
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19",
+    "react-scan": "^0.3.4",
+    "sonner": "^2.0.3",
+    "use-debounce": "^10.0.5",
+    "zustand": "^5.0.5"
+  },
+  "devDependencies": {
+    "@taskmaster/eslint-config": "workspace:*",
+    "@taskmaster/tsconfig": "workspace:*",
+    "@types/luxon": "^3.6.2",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:react19",
+    "@types/react-dom": "catalog:react19",
+    "eslint": "catalog:",
+    "eslint-config-next": "^15.1.7",
+    "typescript": "catalog:"
+  }
+}
